@@ -62,7 +62,31 @@ button {
     margin-bottom: 10px;
 }
 
-input[type="radio"] {
-    margin-left: 5px;
+#board {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    width: 525px;
+}
+
+td {
+    height: 75px;
+    width: 75px;
+}
+
+.red-circle {
+	border-radius: 100%;
+	width: 70px;
+	height: 70px;
+    background: red;
+    margin: 0 auto;
+}
+
+.blue-circle {
+	border-radius: 100%;
+	width: 70px;
+	height: 70px;
+    background: blue;
+    margin: 0 auto;
 }
 
