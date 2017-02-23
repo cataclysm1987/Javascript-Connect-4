@@ -90,3 +90,21 @@ td {
     margin: 0 auto;
 }
 
+#board-header {
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    width: 525px;
+}
+
+.board-td-button button {
+    margin: 0 auto;
+    margin-bottom: -15px;
+    font-size: 26px;
+}
+
+#head0, #head1, #head2, #head3, #head4, #head5, #head6 {
+    height: 25px;
+    text-align: center;
+}
+
