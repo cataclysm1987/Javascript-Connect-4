@@ -164,6 +164,15 @@ function CheckWin(row, column) {
     }
 
     if (vertical >= 3 || horizontal >= 3 || diagonalUp >= 3 || diagonalDown >= 3) {
+        if (vertical >= 3) {
+            console.log("Vertical win");
+        } else if (horizontal >= 3) {
+            console.log("Horizontal win");
+        } else if (diagonalUp >= 3) {
+            console.log("Diagonal Up Win");
+        } else if (diagonalDown >= 3) {
+            console.log("Diagonal Down Win");
+        }
         $("#row0").hide();
         $("#gamestatus").hide();
 
