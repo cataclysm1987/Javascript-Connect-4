@@ -27,43 +27,73 @@ function CheckTurn() {
 }
 
 function CheckWin(row, column) {
-    console.log(Board[row + 1][column]);
     var vertical = 0;
     var horizontal = 0;
     var diagonalUp = 0;
     var diagonalDown = 0;
     //Vertical calculate up
     for (var i = 1; i <= 3; i++) {
-        if (Board[row + i][column] == CheckTurn()) {
-            console.log(Board[row + i][column]);
-            vertical++;
-        } else {
-            break;
+        try {
+            if (Board[row + i][column] == CheckTurn()) {
+                console.log(Board[row + i][column]);
+                vertical++;
+            } else {
+                break;
+            }
+        }
+
+        catch (err) {
+            console.log(err.message);
+
         }
     }
     //Vertical calculate down
     for (var i = 1; i <= 3; i++) {
-        if (Board[row - i][column] == CheckTurn()) {
-            vertical++;
-        } else {
-            break;
+        try {
+            if (Board[row - i][column] == CheckTurn()) {
+                console.log(Board[row - i][column]);
+                vertical++;
+            } else {
+                break;
+            }
+        }
+
+        catch (err) {
+            console.log(err.message);
+
         }
     }
 
     //Horizontal calculate right
     for (var i = 1; i <= 3; i++) {
-        if (Board[row][column + i] == CheckTurn()) {
-            horizontal++;
-        } else {
-            break;
+        try {
+            if (Board[row][column + i] == CheckTurn()) {
+                console.log(Board[row][column + i]);
+                vertical++;
+            } else {
+                break;
+            }
+        }
+
+        catch (err) {
+            console.log(err.message);
+
         }
     }
     //Horizontal calculate left
     for (var i = 1; i <= 3; i++) {
-        if (Board[row][column - i] == CheckTurn()) {
-            horizontal++;
-        } else {
-            break;
+        try {
+            if (Board[row][column - i] == CheckTurn()) {
+                console.log(Board[row][column - i]);
+                vertical++;
+            } else {
+                break;
+            }
+        }
+
+        catch (err) {
+            console.log(err.message);
+
         }
     }
 
