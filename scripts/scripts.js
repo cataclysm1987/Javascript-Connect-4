@@ -69,7 +69,7 @@ function CheckWin(row, column) {
         try {
             if (Board[row][column + i] == CheckTurn()) {
                 console.log(Board[row][column + i]);
-                vertical++;
+                horizontal++;
             } else {
                 break;
             }
@@ -85,7 +85,7 @@ function CheckWin(row, column) {
         try {
             if (Board[row][column - i] == CheckTurn()) {
                 console.log(Board[row][column - i]);
-                vertical++;
+                horizontal++;
             } else {
                 break;
             }
@@ -98,9 +98,70 @@ function CheckWin(row, column) {
     }
 
     //Diagonal up calculate right
+    for (var i = 1; i <= 3; i++) {
+        try {
+            if (Board[row - i][column + i] == CheckTurn()) {
+                console.log(Board[row - i][column + i]);
+                diagonalUp++;
+            } else {
+                break;
+            }
+        }
+
+        catch (err) {
+            console.log(err.message);
+
+        }
+    }
     //Diagonal up calculate left
+    for (var i = 1; i <= 3; i++) {
+        try {
+            if (Board[row + i][column - i] == CheckTurn()) {
+                console.log(Board[row + i][column - i]);
+                diagonalUp++;
+            } else {
+                break;
+            }
+        }
+
+        catch (err) {
+            console.log(err.message);
+
+        }
+    }
     //Diagonal down calculate right
+    for (var i = 1; i <= 3; i++) {
+        try {
+            if (Board[row + i][column + i] == CheckTurn()) {
+                console.log(Board[row + i][column + i]);
+                diagonalDown++;
+            } else {
+                break;
+            }
+        }
+
+        catch (err) {
+            console.log(err.message);
+
+        }
+    }
     //Diagonal down calculate left
+    
+    for (var i = 1; i <= 3; i++) {
+        try {
+            if (Board[row - i][column - i] == CheckTurn()) {
+                console.log(Board[row - i][column - i]);
+                diagonalDown++;
+            } else {
+                break;
+            }
+        }
+
+        catch (err) {
+            console.log(err.message);
+
+        }
+    }
 
     if (vertical >= 3 || horizontal >= 3 || diagonalUp >= 3 || diagonalDown >= 3) {
         $("#row0").hide();
