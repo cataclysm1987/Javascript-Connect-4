@@ -35,7 +35,6 @@ function CheckWin(row, column) {
     for (var i = 1; i <= 3; i++) {
         try {
             if (Board[row + i][column] == CheckTurn()) {
-                console.log(Board[row + i][column]);
                 vertical++;
             } else {
                 break;
@@ -43,7 +42,7 @@ function CheckWin(row, column) {
         }
 
         catch (err) {
-            console.log(err.message);
+            console.log("Out of range");
 
         }
     }
@@ -51,7 +50,7 @@ function CheckWin(row, column) {
     for (var i = 1; i <= 3; i++) {
         try {
             if (Board[row - i][column] == CheckTurn()) {
-                console.log(Board[row - i][column]);
+                
                 vertical++;
             } else {
                 break;
@@ -59,7 +58,7 @@ function CheckWin(row, column) {
         }
 
         catch (err) {
-            console.log(err.message);
+            console.log("Out of range");
 
         }
     }
@@ -68,7 +67,7 @@ function CheckWin(row, column) {
     for (var i = 1; i <= 3; i++) {
         try {
             if (Board[row][column + i] == CheckTurn()) {
-                console.log(Board[row][column + i]);
+                
                 horizontal++;
             } else {
                 break;
@@ -76,7 +75,7 @@ function CheckWin(row, column) {
         }
 
         catch (err) {
-            console.log(err.message);
+            console.log("Out of range");
 
         }
     }
@@ -84,7 +83,7 @@ function CheckWin(row, column) {
     for (var i = 1; i <= 3; i++) {
         try {
             if (Board[row][column - i] == CheckTurn()) {
-                console.log(Board[row][column - i]);
+                
                 horizontal++;
             } else {
                 break;
@@ -92,7 +91,7 @@ function CheckWin(row, column) {
         }
 
         catch (err) {
-            console.log(err.message);
+            console.log("Out of range");
 
         }
     }
@@ -101,7 +100,7 @@ function CheckWin(row, column) {
     for (var i = 1; i <= 3; i++) {
         try {
             if (Board[row - i][column + i] == CheckTurn()) {
-                console.log(Board[row - i][column + i]);
+                
                 diagonalUp++;
             } else {
                 break;
@@ -109,7 +108,7 @@ function CheckWin(row, column) {
         }
 
         catch (err) {
-            console.log(err.message);
+            console.log("Out of range");
 
         }
     }
@@ -117,7 +116,7 @@ function CheckWin(row, column) {
     for (var i = 1; i <= 3; i++) {
         try {
             if (Board[row + i][column - i] == CheckTurn()) {
-                console.log(Board[row + i][column - i]);
+                
                 diagonalUp++;
             } else {
                 break;
@@ -125,7 +124,7 @@ function CheckWin(row, column) {
         }
 
         catch (err) {
-            console.log(err.message);
+            console.log("Out of range");
 
         }
     }
@@ -133,7 +132,7 @@ function CheckWin(row, column) {
     for (var i = 1; i <= 3; i++) {
         try {
             if (Board[row + i][column + i] == CheckTurn()) {
-                console.log(Board[row + i][column + i]);
+                
                 diagonalDown++;
             } else {
                 break;
@@ -141,7 +140,7 @@ function CheckWin(row, column) {
         }
 
         catch (err) {
-            console.log(err.message);
+            console.log("Out of range");
 
         }
     }
@@ -150,7 +149,7 @@ function CheckWin(row, column) {
     for (var i = 1; i <= 3; i++) {
         try {
             if (Board[row - i][column - i] == CheckTurn()) {
-                console.log(Board[row - i][column - i]);
+                
                 diagonalDown++;
             } else {
                 break;
@@ -158,7 +157,7 @@ function CheckWin(row, column) {
         }
 
         catch (err) {
-            console.log(err.message);
+            console.log("Out of range");
 
         }
     }
@@ -258,7 +257,7 @@ function DropColumn0() {
             UpdateStatus();
         }
     }
-    console.log(Board);
+    
 }
 
 function DropColumn1() {
