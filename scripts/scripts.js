@@ -735,7 +735,7 @@ function Player1Place01() {
 
 function Player1Place02() {
     $("#02").append('<div class="red-circle"></div>');
-    Board[0][3] = 1;
+    Board[0][2] = 1;
 }
 
 function Player1Place03() {
@@ -957,7 +957,7 @@ function Player2Place01() {
 
 function Player2Place02() {
     $("#02").append('<div class="blue-circle"></div>');
-    Board[0][3] = 2;
+    Board[0][2] = 2;
 }
 
 function Player2Place03() {
