@@ -18,8 +18,9 @@ var Board = [
   [0, 0, 0, 0, 0, 0, 0]
 ];
 
+console.log($.inArray( 0, Board ));
+
 function CheckTurn() {
-    console.log($.inArray( 0, Board ));
     if (CurrentTurn % 2 == 1) {
         return 1;
     } else {
