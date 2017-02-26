@@ -18,8 +18,6 @@ var Board = [
   [0, 0, 0, 0, 0, 0, 0]
 ];
 
-console.log($.inArray( 1, Board[0] ));
-console.log($.inArray( 1, Board[1] ));
 
 function CheckTurn() {
     if (CurrentTurn % 2 == 1) {
@@ -183,11 +181,11 @@ function CheckWin(row, column) {
         } else if (CheckTurn() == 2) {
             document.getElementById("winmessage").innerHTML = "Player 2 Wins!";
         }
-    } //else if ($.inArray( 0, Board ) == -1) {
-        //$("#row0").hide();
-        //$("#gamestatus").hide();
-        //document.getElementById("winmessage").innerHTML = "It's a Draw!";
-   // }
+    } else if ($.inArray( 0, Board[0] ) == -1 && $.inArray( 0, Board[1] ) == -1 && $.inArray( 0, Board[2] ) == -1 && $.inArray( 0, Board[3] ) == -1) && $.inArray( 0, Board[4] ) == -1 && $.inArray( 0, Board[5] ) == -1 {
+        $("#row0").hide();
+        $("#gamestatus").hide();
+        document.getElementById("winmessage").innerHTML = "It's a Draw!";
+    }
 }
 
 function DropColumn0() {
