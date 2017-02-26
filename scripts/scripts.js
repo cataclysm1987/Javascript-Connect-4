@@ -180,6 +180,10 @@ function CheckWin(row, column) {
         } else if (CheckTurn() == 2) {
             document.getElementById("winmessage").innerHTML = "Player 2 Wins!";
         }
+    } else if ($.inArray( 0, Board ) == -1) {
+        $("#row0").hide();
+        $("#gamestatus").hide();
+        document.getElementById("winmessage").innerHTML = "It's a Draw!";
     }
 }
 
