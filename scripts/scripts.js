@@ -181,7 +181,7 @@ function CheckWin(row, column) {
         } else if (CheckTurn() == 2) {
             document.getElementById("winmessage").innerHTML = "Player 2 Wins!";
         }
-    } else if ($.inArray( 0, Board[0] ) == -1 && $.inArray( 0, Board[1] ) == -1 && $.inArray( 0, Board[2] ) == -1 && $.inArray( 0, Board[3] ) == -1) && $.inArray( 0, Board[4] ) == -1 && $.inArray( 0, Board[5] ) == -1 {
+    } else if ($.inArray( 0, Board[0] ) == -1 && $.inArray( 0, Board[1] ) == -1 && $.inArray( 0, Board[2] ) == -1 && $.inArray( 0, Board[3] ) == -1) && $.inArray( 0, Board[4] ) == -1 && $.inArray( 0, Board[5] ) == -1) {
         $("#row0").hide();
         $("#gamestatus").hide();
         document.getElementById("winmessage").innerHTML = "It's a Draw!";
