@@ -19,6 +19,7 @@ var Board = [
 ];
 
 function CheckTurn() {
+    console.log($.inArray( 0, Board ));
     if (CurrentTurn % 2 == 1) {
         return 1;
     } else {
@@ -180,11 +181,11 @@ function CheckWin(row, column) {
         } else if (CheckTurn() == 2) {
             document.getElementById("winmessage").innerHTML = "Player 2 Wins!";
         }
-    } else if ($.inArray( 0, Board ) == -1) {
-        $("#row0").hide();
-        $("#gamestatus").hide();
-        document.getElementById("winmessage").innerHTML = "It's a Draw!";
-    }
+    } //else if ($.inArray( 0, Board ) == -1) {
+        //$("#row0").hide();
+        //$("#gamestatus").hide();
+        //document.getElementById("winmessage").innerHTML = "It's a Draw!";
+   // }
 }
 
 function DropColumn0() {
